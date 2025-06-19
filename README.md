@@ -34,15 +34,10 @@ This is my **personal developer portfolio website** built using HTML, CSS, and J
 ![Homepage](5.jpg)
 
 
+
+
+
 ---
-
-## 🚀 How to Run Locally
-
-```bash
-git clone https://github.com/ishitaamin/portfolio.git
-cd portfolio
-open index.html
-
 
 ## 🙋‍♀️ Author
 
@@ -56,3 +51,5 @@ open index.html
     </td>
   </tr>
 </table>
+
+---
