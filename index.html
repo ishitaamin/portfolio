@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Ishita Portfolio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- 🌌 INTRO SPLASH -->
+<div id="intro">
+    <canvas id="intro-stars"></canvas>
+    <div class="intro-text">
+      <h1>Ishita Amin</h1>
+      <p>Creative Developer & Designer</p>
+    </div>
+  </div>
+  
+
+<!-- 🎯 HERO SECTION (Post-Intro) -->
+<div id="hero">
+    <!-- 🌌 Canvas Stars -->
+    <canvas id="hero-stars"></canvas>
+  
+    <!-- ✅ Navbar -->
+    <nav class="glass-navbar" aria-label="Main Navigation">
+      <!-- Hamburger Button -->
+      <button class="glass-toggler" id="glassToggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    
+      <!-- Collapsible Links -->
+      <ul class="glass-nav-links" id="glassNavLinks">
+        <li><a href="#">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+    
+  
+    <!-- 🎯 HERO SPLIT -->
+    <section class="hero-split">
+      <div class="hero-left" id="hero-text">
+        <h2>Hello, I'm Ishita Amin</h2>
+        <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
+      </div>
+  
+      <div class="hero-right" id="hero-image">
+        <img src="./assests/ishita.png" alt="Ishita Amin Portrait" />
+      </div>
+    </section>
+  </div>
+  
+  
+
+<!-- 🧠 SKILL SET SECTION -->
+
+<section class="skills-section" id="skills">
+    <h2>My Skill Set</h2>
+  
+    <div class="skills-container">
+      <div class="skills-row slide-in-left">
+        <div class="skill-icon"><img src="./assests/html.png" alt="HTML" /></div>
+        <div class="skill-icon"><img src="./assests/css.png" alt="CSS" /></div>
+        <div class="skill-icon"><img src="./assests/js.png" alt="JavaScript" /></div>
+        <div class="skill-icon"><img src="./assests/bootstrap.png" alt="Bootstrap" /></div>
+        <div class="skill-icon"><img src="./assests/figma.png" alt="Java" /></div>
+        <div class="skill-icon"><img src="./assests/canva.png" alt="Java" /></div>
+        <div class="skill-icon"><img src="./assests/django.png" alt="Java" /></div>
+      </div>
+  
+      <div class="skills-row slide-in-right">
+        <div class="skill-icon"><img src="./assests/c.png" alt="C" /></div>
+        <div class="skill-icon"><img src="./assests/cpp.png" alt="C++" /></div>
+        <div class="skill-icon"><img src="./assests/react.png" alt="React" /></div>
+        <div class="skill-icon"><img src="./assests/python.png" alt="Java" /></div>
+        <div class="skill-icon"><img src="./assests/mysql.png" alt="Java" /></div>
+        <div class="skill-icon"><img src="./assests/android.png" alt="Java" /></div>
+      </div>
+      
+    </div>
+  </section>
+
+
+
+
+  <!-- work section -->
+<div class="work-title" id="work">
+    <h2>My Work</h2>
+</div>
+
+ 
+  <section id="projects-section">
+    <div class="project-card">
+        <canvas class="project-stars"></canvas>
+        <div class="project-content">
+          <div class="text">
+            <h5>Web Development</h5>
+            <h2>NOVA-Ecommerce proejct </h2>
+            <p>
+                Developed Nova, a responsive multi-page e-commerce web app using React.js. Implemented dynamic product listings, a detailed product view, and a wishlist feature with smooth navigation via React Router. Focused on modular components and efficient state management.
+            </p>
+            <div class="skills">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">ReactJS</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">Canva</span>
+              <span class="skill-tag">Image Processing </span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/ishitaamin/nova-jewellrey-ecommerce" target="_blank" class="project-btn">🔗 View Project</a>
+              </div>
+          </div>
+          <div class="image">
+            <img src="assests/1.jpg" alt="Project 1" />
+          </div>
+        </div>
+      </div>
+  
+      <div class="project-card">
+        <canvas class="project-stars"></canvas>
+        <div class="project-content">
+          <div class="text">
+            <h5>Web Development </h5>
+            <h2>Freelance Project</h2>
+            <p>
+                Developed a responsive one-page website for HARIDEVELOPERS to showcase their services and portfolio. Focused on clean UI, mobile responsiveness, and client collaboration throughout the project.
+            </p>
+            <div class="skills">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Bootstrap</span>
+              <span class="skill-tag">Image Processing </span>
+            </div>
+            <div class="project-links">
+                <a href="https://haridevelopers.in/" target="_blank" class="project-btn">🔗 View Project</a>
+              </div>
+          </div>
+          <div class="image">
+            <img src="assests/2.jpg" alt="Project 1" />
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <canvas class="project-stars"></canvas>
+        <div class="project-content">
+          <div class="text">
+            <h5>Big Data Analysis</h5>
+            <h2>PizzaSalesIQ<br />Inventory Forecasting</h2>
+            <p>
+                Developed PizzaSalesIQ, a data-driven dashboard to optimize inventory and forecast demand for pizza outlets using POS data. Extracted key sales insights and built a weekly prediction model with Exponential Smoothing, deploying visualizations via Streamlit and AWS.
+            </p>
+            <div class="skills">
+              <span class="skill-tag">AWS S3</span>
+              <span class="skill-tag">AWS Athena</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Streamlit</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Time Series Forecasting </span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/ishitaamin/pizzaIQ-sales" target="_blank" class="project-btn">🔗 View Project</a>
+              </div>
+          </div>
+          <div class="image">
+            <img src="assests/3.jpg" alt="Project 1" />
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <canvas class="project-stars"></canvas>
+        <div class="project-content">
+          <div class="text">
+            <h5>Android App</h5>
+            <h2>VOYA- Travel App</h2>
+            <p>
+                Built VOYA, a smart Android travel companion app with map integration, dynamic itinerary planning, expense tracking, and cloud-based document storage. Enables real-time collaboration and lets users share trips publicly or privately for discovery and coordination.
+            </p>
+            <div class="skills">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Android Studio</span>
+              <span class="skill-tag">XML</span>
+              <span class="skill-tag">Firebase</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/ishitaamin/ItineraryManager" target="_blank" class="project-btn">🔗 View Project</a>
+              </div>
+          </div>
+          <div class="image">
+            <img src="assests/4.jpg" alt="Project 1" />
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <canvas class="project-stars"></canvas>
+        <div class="project-content">
+          <div class="text">
+            <h5>Web Development </h5>
+            <h2>Portfolio</h2>
+            <p>
+                Designed and developed a personal portfolio website to showcase my projects, skills, and resume. Focused on clean UI, responsive design, and smooth navigation to create a professional online presence. Built using HTML, CSS, JavaScript, and animation effects for interactivity.
+            </p>
+            <div class="skills">
+              
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">GSAP</span>
+            </div>
+            <div class="project-links">
+                <a href="#" target="_blank" class="project-btn">🔗 View Project</a>
+              </div>
+          </div>
+          <div class="image">
+            <img src="assests/5.jpg"alt="Project 1" />
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+
+
+  <section class="resume-section" id="resume">
+    <div class="resume-container animate-on-scroll">
+      <h2>
+        Download My
+        <a href="/Users/qaa/Desktop/Novuz Ark/10june/portfolio/assests/resume.pdf" target="_blank" class="resume-box">
+          Resume
+        </a>
+      </h2>
+    </div>
+  </section>
+  
+
+
+  <!-- 🌌 Contact Me + Footer Section -->
+<section class="contact-footer" id="contact">
+    <div class="contact-container">
+      <h2>Contact Me</h2>
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="form-msg" style="margin-top: 10px; color: #8b5cf6; font-weight: 500; display: none;">
+          ✅ Message sent successfully!
+        </p>
+      </form>
+      
+    </div>
+  
+    <footer class="footer">
+      <div class="footer-content">
+        
+        <div class="social-links">
+          <a href="https://www.instagram.com/_.ixhita.__/">Instagram</a>
+          <a href="mailto:aminishita30@gmail.com">Mail</a>
+          <a href="https://www.linkedin.com/in/ishita-amin-841726253/">LinkedIn</a>
+          <a href="https://github.com/ishitaamin">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+ 
+  
+  
+  
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
