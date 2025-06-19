@@ -43,12 +43,27 @@ function createStars(canvasId, count) {
     });
   }
   
-  const toggleBtn = document.getElementById('glassToggle');
-  const navLinks = document.getElementById('glassNavLinks');
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById('glassToggle');
+    const navLinks = document.getElementById('glassNavLinks');
+    const linkItems = navLinks.querySelectorAll("a");
 
-  toggleBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
+    toggleBtn.addEventListener('click', function () {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('active');
+    });
+
+    linkItems.forEach(link => {
+      link.addEventListener('click', () => {
+        linkItems.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        navLinks.classList.remove('active');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
   });
+
 
 
 
