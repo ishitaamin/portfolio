@@ -401,7 +401,7 @@ body, html {
   }
   
   .skills-section h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 50px;
     font-weight: 600;
     color: #ffffff;
@@ -492,7 +492,7 @@ body, html {
     gap: 15px;
   }
   .skills-section h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 50px;
     font-weight: 600;
     color: #ffffff;
@@ -522,7 +522,7 @@ body, html {
     
   }
   .work-title {
-    font-size: 1.5rem;
+    font-size: 3rem;
     margin-bottom: 50px;
     margin-top: 50px;
     font-weight: 600;
@@ -585,10 +585,11 @@ body, html {
     color: #a68eff;
     font-weight: 400;
     margin-bottom: 10px;
+    font-size: 1rem;
   }
   
   .project-content .text h2 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -659,6 +660,9 @@ body, html {
   }
   
   @media (max-width: 1024px) {
+    .work-title h2{
+      font-size: 3rem;
+    }
     .project-card{
       margin-top: 20px;
     }
@@ -882,12 +886,13 @@ body, html {
   }
   
   .contact-container {
+    width: 100%;
     max-width: 600px;
     margin: auto;
   }
   
   .contact-container h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 20px;
   }
   
@@ -895,6 +900,7 @@ body, html {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-bottom: 30px;
   }
   
   .contact-form input,
@@ -904,7 +910,7 @@ body, html {
     border: none;
     background-color: #1e1e1e;
     color: #fff;
-    font-size: 1rem;
+    font-size: 2rem;
   }
   
   .contact-form input::placeholder,
@@ -918,7 +924,7 @@ body, html {
     border-radius: 8px;
     background: #8b5cf6;
     color: #fff;
-    font-size: 1rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: background 0.3s;
   }
@@ -993,41 +999,58 @@ body, html {
   /* responcive */
 
  /* 🌐 Responsive Enhancements for Mobile View */
+
 @media (max-width: 768px) {
+  .contact-container {
+    padding: 0 20px;
+    max-width: 100%;
+  }
+
   .contact-container h2 {
-    font-size: 2.8rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    font-size: 2rem;
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .contact-form {
+    gap: 12px;
   }
 
   .contact-form input,
   .contact-form textarea {
-    font-size: 1.1rem;
-    padding: 16px;
+    font-size: 1rem;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .contact-form button {
-    font-size: 1.1rem;
-    padding: 14px;
+    font-size: 1rem;
+    padding: 12px;
+    width: 100%;
   }
 
   #form-msg {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .footer-content {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
   .social-links a {
-    font-weight: 400;
-    font-size: 2rem;
-    padding: 4px 10px;
+    font-size: 1.2rem;
+    padding: 5px 8px;
   }
 
   .toast {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -1037,34 +1060,31 @@ body, html {
   }
 
   .contact-container h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .contact-form input,
   .contact-form textarea {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    color: #ccc;
-    padding: 14px;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 10px;
   }
 
   .contact-form button {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.2rem;
     padding: 12px;
   }
 
   .social-links {
-    gap: 15px;
-    justify-content: center;
+    gap: 8px;
   }
 
   .social-links a {
-    font-size: 3rem;
+    font-size: 1.4rem;
   }
 
   .toast {
-    font-size: 0.95rem;
-    padding: 10px 16px;
+    font-size: 0.85rem;
+    padding: 10px 14px;
   }
 }
