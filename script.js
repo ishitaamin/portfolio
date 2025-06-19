@@ -50,7 +50,7 @@ function createStars(canvasId, count) {
     navLinks.classList.toggle('show');
   });
 
-  
+
 
   gsap.registerPlugin(ScrollTrigger);
   // GSAP INTRO ANIMATION
@@ -91,7 +91,7 @@ function createStars(canvasId, count) {
   createStars("hero-stars", 150);
   
   // Typed text animation
-  const text = "Passionate Web & Software Developer currently pursuing my B.Tech in Computer Science from Navrachana University. With hands-on experience in frontend and backend technologies through internships and personal projects";
+  const text = "Passionate Web & Software Developer currently pursuing my B.Tech in Computer Science from Navrachana University. With hands-on experience in frontend and backend technologies through internships and personal projects.";
   const typedText = document.getElementById("typed-text");
   
   let index = 0;
@@ -247,28 +247,53 @@ const observe = new IntersectionObserver((entries) => {
 // contact
 
 (function () {
-  emailjs.init("t3mIWiOywd_eciofi"); // Replace with your Public Key
+  emailjs.init("t3mIWiOywd_eciofi"); // Replace with your actual public key
 })();
 
 const form = document.getElementById("contact-form");
 const msg = document.getElementById("form-msg");
+const loader = document.getElementById("form-loader");
+const toast = document.getElementById("toast-msg");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
+  // Show loader
+  loader.style.display = "block";
+
+  // Hide previous messages
+  msg.style.display = "none";
+  toast.style.display = "none";
+
   emailjs
     .sendForm("service_1jnopo5", "template_be2fhrb", form)
     .then(() => {
-      msg.textContent = "✅ Message sent successfully!";
-      msg.style.display = "block";
-      msg.style.color = "#8b5cf6";
+      loader.style.display = "none";
+
+      // Show toast message
+      showToast("✅ Message sent successfully!", "#8b5cf6");
+
+      // Reset form
       form.reset();
     })
     .catch(() => {
-      msg.textContent = "❌ Failed to send. Please try again later.";
-      msg.style.display = "block";
-      msg.style.color = "red";
+      loader.style.display = "none";
+
+      // Show toast message
+      showToast("❌ Failed to send. Please try again later.", "red");
     });
 });
 
-// responsive
+function showToast(message, color) {
+  toast.textContent = message;
+  toast.style.backgroundColor = color;
+  toast.style.display = "block";
+
+  // Hide toast after 5 seconds
+  setTimeout(() => {
+    toast.style.display = "none";
+  }, 5000);
+}
+
+
+

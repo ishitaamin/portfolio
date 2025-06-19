@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Ishita Portfolio</title>
+<title>Ishita Amin</title>
 <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
 
@@ -31,7 +32,7 @@
     
       <!-- Collapsible Links -->
       <ul class="glass-nav-links" id="glassNavLinks">
-        <li><a href="#">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -215,7 +216,7 @@
               <span class="skill-tag">GSAP</span>
             </div>
             <div class="project-links">
-                <a href="#" target="_blank" class="project-btn">🔗 View Project</a>
+                <a href="https://ishita-amin.vercel.app/" target="_blank" class="project-btn">🔗 View Project</a>
               </div>
           </div>
           <div class="image">
@@ -232,15 +233,15 @@
     <div class="resume-container animate-on-scroll">
       <h2>
         Download My
-        <a href="/Users/qaa/Desktop/Novuz Ark/10june/portfolio/assests/resume.pdf" target="_blank" class="resume-box">
+        <a href=" https://drive.google.com/file/d/1xISZ5ezHHhPkVAyKoLJlKphvloNjXX0t/view?usp=drive_link" target="_blank" class="resume-box">
           Resume
         </a>
       </h2>
     </div>
   </section>
   
-
-
+  
+ 
   <!-- 🌌 Contact Me + Footer Section -->
 <section class="contact-footer" id="contact">
     <div class="contact-container">
@@ -250,6 +251,11 @@
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
+        <!-- Loader -->
+<div id="form-loader" class="loader" style="display: none;"></div>
+
+<!-- Toast Message -->
+<div id="toast-msg" class="toast" style="display: none;"></div>
         <p id="form-msg" style="margin-top: 10px; color: #8b5cf6; font-weight: 500; display: none;">
           ✅ Message sent successfully!
         </p>

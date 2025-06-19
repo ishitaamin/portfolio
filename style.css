@@ -60,21 +60,21 @@ body, html {
     /* into */
 @media (max-width: 1024px) {
   .intro-text h1 {
-    font-size: 4.5rem;
+    font-size:6.5rem;
   }
 
   .intro-text p {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .intro-text h1 {
-    font-size: 3.5rem;
+    font-size:6.5rem;
   }
 
   .intro-text p {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 
   #intro {
@@ -84,12 +84,12 @@ body, html {
 
 @media (max-width: 480px) {
   .intro-text h1 {
-    font-size: 2.5rem;
+    font-size:6.5rem;
     text-align: center;
   }
 
   .intro-text p {
-    font-size: 1rem;
+    font-size: 2rem;
     text-align: center;
   }
 
@@ -113,7 +113,7 @@ body, html {
 }
     /* 🎯 HERO SECTION */
     #hero {
-    position: relative;
+   
     width: 100%;
     height: 100%;
     background: black; /* Base black background */
@@ -272,7 +272,7 @@ body, html {
     flex-direction: column-reverse;
     text-align: center;
     padding: 40px 20px;
-    height: auto;
+    height: 100vh;
     gap: 40px;
     
   }
@@ -286,18 +286,21 @@ body, html {
   }
 
   .hero-left h2 {
-    font-size: 2.0rem;
+    font-size: 3.0rem;
     
   }
 
   .hero-left h1 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     
   }
 
+  
+
   .hero-right img {
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
+    
     border-radius: 20px;
     box-shadow: 0 0 40px rgba(165, 110, 255, 0.3);
     transition: transform 0.3s ease;
@@ -482,6 +485,30 @@ body, html {
     transition: all 0.5s ease-in;
   }
  /* responsive skill */
+ @media screen and (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 icons per row */
+    grid-auto-rows: auto;
+    gap: 15px;
+  }
+  .skills-section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    font-weight: 600;
+    color: #ffffff;
+    
+  }
+  .skill-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skills-section {
+    height: auto;
+    padding: 40px 10px;
+  }
+}
+
 
  
   /* work */
@@ -636,9 +663,11 @@ body, html {
       margin-top: 20px;
     }
     
+    
     .project-content {
       flex-direction: column;
       text-align: left;
+      
     }
   
     .project-content .image {
@@ -647,7 +676,42 @@ body, html {
     }
   
     .project-content .image img {
-      max-height: 600px;
+      max-height: 650px;
+    }
+    .project-content .text h5 {
+      color: #a68eff;
+      font-weight: 400;
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+    
+    .project-content .text h2 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    
+    .project-content .text p {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+    .skill-tag {
+      background-color: #a56eff22;
+      border: 1px solid #a56eff;
+      color: #a56eff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 2rem;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+    .project-links {
+      margin-top: 20px;
+      font-size: 2rem;
+      font-weight: 500;
+      
     }
   }
   
@@ -697,7 +761,10 @@ body, html {
     }
   
     .work-title h2 {
-      font-size: 2rem;
+      font-size: 3.5rem;
+      margin-bottom: 50px;
+      font-weight: 600;
+      color: #ffffff;
     }
   }
   
@@ -858,6 +925,38 @@ body, html {
   .contact-form button:hover {
     background: #7c3aed;
   }
+
+  /* Loader Spinner */
+.loader {
+  border: 4px solid #e0e0e0;
+  border-top: 4px solid #8b5cf6;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Toast Message */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  opacity: 0.95;
+  font-weight: 500;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
   
   .footer {
     border-top: 1px solid #333;
@@ -892,5 +991,14 @@ body, html {
 
   /* responcive */
 
+  @media (max-width: 480px) {
+    .social-links a {
+      font-size: 0.9rem;
+    }
+  }
+  
 
+  
+ 
+  
   /* hero   */
