@@ -991,14 +991,72 @@ body, html {
 
   /* responcive */
 
-  @media (max-width: 480px) {
-    .social-links a {
-      font-size: 0.9rem;
-    }
+ /* 🌐 Responsive Enhancements for Mobile View */
+@media (max-width: 768px) {
+  .contact-container h2 {
+    font-size: 2.2rem;
   }
-  
 
-  
- 
-  
-  /* hero   */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.1rem;
+    padding: 16px;
+  }
+
+  .contact-form button {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+
+  #form-msg {
+    font-size: 1rem;
+  }
+
+  .footer-content {
+    font-size: 1rem;
+  }
+
+  .social-links a {
+    font-size: 3rem;
+    padding: 4px 10px;
+  }
+
+  .toast {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 0 15px;
+  }
+
+  .contact-container h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+    padding: 14px;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .social-links {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .social-links a {
+    font-size: 3rem;
+  }
+
+  .toast {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+}
