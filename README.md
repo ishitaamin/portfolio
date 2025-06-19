@@ -31,8 +31,8 @@ This is my **personal developer portfolio website** built using HTML, CSS, and J
 
 > *(Add screenshots here if you want, e.g., full-page view, mobile view, etc.)*
 
-![Homepage](./assets/preview-home.png)
-![Responsive Layout](./assets/preview-responsive.png)
+![Homepage](5.jpg)
+
 
 ---
 
