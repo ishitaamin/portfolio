@@ -597,7 +597,9 @@ body, html {
     background-color: #0a0a0a;
   }
 
-  
+  .skills-section h2{
+    text-align: center;
+  }
 
   .skills-container {
     gap: 30px;
@@ -625,6 +627,7 @@ body, html {
 @media screen and (max-width: 768px) {
   .skills-section h2 {
     font-size: 2.2rem;
+    text-align: center;
   }
 
   
@@ -804,6 +807,7 @@ body, html {
       margin-bottom: 50px;
       font-weight: 600;
       color: #ffffff;
+      text-align: center;
     }
   
     .project-card {
@@ -911,6 +915,7 @@ body, html {
   
     .work-title h2 {
       font-size: 1.8rem;
+      text-align: center;
     }
   }
   
