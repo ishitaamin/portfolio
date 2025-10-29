@@ -2,7 +2,7 @@
 
 This is my **personal developer portfolio website** built using HTML, CSS, and JavaScript. It highlights my work, projects, resume, skills, and contact details — designed to reflect both aesthetics and functionality.
 
-🔗 **Live Website**: [ishitaamin.vercel.app](https://ishitaamin.vercel.app) *(update with your actual domain if different)*
+🔗 **Live Website**: [ishitaamin.vercel.app](https://ishita-amin.vercel.app) *(update with your actual domain if different)*
 
 ---
 
