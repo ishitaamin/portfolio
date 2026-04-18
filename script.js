@@ -106,8 +106,8 @@ function createStars(canvasId, count) {
   createStars("hero-stars", 150);
   
   // Typed text animation
-  const text = "Passionate Web & Software Developer currently pursuing my B.Tech in Computer Science from Navrachana University. With hands-on experience in frontend and backend technologies through internships and personal projects.";
-  const typedText = document.getElementById("typed-text");
+// Typed text animation
+const text = "Software Developer specializing in Full-Stack architecture and Agentic AI. Currently building enterprise React Native solutions and autonomous AI agents using LangGraph and LLMs.";  const typedText = document.getElementById("typed-text");
   
   let index = 0;
   let interrupted = false;

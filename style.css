@@ -502,7 +502,7 @@ body, html {
     color: white;
     text-align: center;
     margin-top: -50px;
-    height: 550px;
+    height: 750px;
   }
   
   .skills-section h2 {
@@ -1293,3 +1293,176 @@ body, html {
 }
 
 
+
+
+
+
+
+/* expereince */
+
+/* 💼 EXPERIENCE SECTION STYLES */
+.experience-section {
+  max-width: 1000px;
+  margin: 0 auto 100px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.exp-card {
+  background: radial-gradient(circle at top left, #1c1c3b 0%, #0a0a0a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(100, 100, 255, 0.1);
+  color: white;
+}
+
+.exp-card h3 {
+  color: #a56eff;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.exp-card h4 {
+  color: #ccc;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+}
+
+.exp-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exp-card ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.exp-card ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #a56eff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.exp-card ul li strong {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .exp-card {
+      padding: 25px;
+  }
+  .exp-card h3 {
+      font-size: 1.5rem;
+  }
+  .exp-card h4 {
+      font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   HERO TYPOGRAPHY & LAYOUT
+   ========================================= */
+   .hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Better spacing between greeting and text */
+  }
+  
+  .hero-greeting {
+    /* Scales dynamically from 2.5rem on mobile to 4rem on desktop */
+    font-size: clamp(2.5rem, 4vw, 4rem); 
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #ffffff 0%, #d1baff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero-headline {
+    /* Dynamic sizing: stays readable on mobile, elegant on desktop */
+    font-size: clamp(1.1rem, 2vw, 1.4rem); 
+    font-weight: 300; /* Lighter font weight looks more premium */
+    color: #cccccc; /* Slightly brighter for better contrast */
+    line-height: 1.8; /* Adds breathing room between lines */
+    margin: 0;
+    max-width: 550px; /* Keeps the text block from getting too wide */
+  }
+  
+  /* Call to Action Buttons */
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .primary-btn, .secondary-btn {
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-btn {
+    background: #a56eff;
+    color: white;
+    box-shadow: 0 4px 20px rgba(165, 110, 255, 0.3);
+  }
+  
+  .primary-btn:hover {
+    background: #915cff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(165, 110, 255, 0.5);
+  }
+  
+  .secondary-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  /* Ensure buttons stack neatly on very small phones */
+  @media (max-width: 480px) {
+    .hero-cta {
+      flex-direction: column;
+      width: 100%;
+    }
+    .primary-btn, .secondary-btn {
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
