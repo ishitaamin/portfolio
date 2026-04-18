@@ -496,65 +496,196 @@ body, html {
     
 
 /* 📱 Responsive Styles */
-.skills-section {
-    padding: 60px 20px;
-    background-color: #0a0a0a;
+
+
+/* =========================================
+   🧠 SKILLS SECTION - 3x2x3 MATRIX LAYOUT
+   ========================================= */
+
+   .skills-section {
+    padding: 80px 20px;
+    background-color: #050505; 
     color: white;
     text-align: center;
-    margin-top: -50px;
-    height: 750px;
+    overflow-x: hidden;
   }
   
   .skills-section h2 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     margin-bottom: 50px;
     font-weight: 600;
     color: #ffffff;
-    text-align: center;
-    
   }
   
+  /* Vertical container holding the rows */
   .skills-container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
     align-items: center;
-    padding-top: 30px;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Horizontal rows that center their items */
+  .skills-grid-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap; /* Allows safe stacking on mobile phones */
+  }
+  
+  /* Glassmorphism Cards - Forced to Exact Same Size */
+  .skills-category {
+    width: 350px; /* Forces every box to be identical */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: rgba(20, 20, 25, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: left;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skills-category:hover {
+    transform: translateY(-5px);
+    border-color: rgba(165, 110, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(165, 110, 255, 0.15);
+  }
+  
+  .skills-category h3 {
+    color: #d1baff; 
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    letter-spacing: 0.5px;
   }
   
   .skills-row {
     display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 30px;
-    padding: 20px;
-    margin-left: 20px;
-    margin-right:20px ;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   
-  .skill-icon {
-    width: 90px;
-    height: 90px;
-    padding: 10px;
-    border-radius: 20px;
-    background: #1a1a1a;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .skill-tag {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cccccc;
+    padding: 8px 16px;
+    border-radius: 30px; 
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: default;
   }
   
-  .skill-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    filter: brightness(0.9);
+  .skill-tag:hover {
+    background: rgba(165, 110, 255, 0.15);
+    border-color: #a56eff;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(165, 110, 255, 0.3);
+    transform: scale(1.05);
   }
   
-  .skill-icon:hover {
-    transform: scale(1.15);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  /* --- Slide Animations --- */
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-out;
   }
   
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease-out;
+  }
+  
+  .slide-in-left.active, 
+  .slide-in-right.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Mobile adjustments so it doesn't break on small screens */
+  @media (max-width: 768px) {
+    .skills-category {
+      width: 100%; /* Expands to full screen width on phones */
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-category {
+      padding: 20px;
+    }
+    .skill-tag {
+      font-size: 0.85rem;
+      padding: 6px 12px;
+    }
+  }
 
+
+  /* Container for each box */
+.skills-category {
+  background: rgba(20, 20, 25, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: left;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Allows the box to expand downward if there are many tags */
+}
+
+.skills-category h3 {
+  color: #d1baff; 
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* This is the crucial part that fixes the overflow */
+.skills-row {
+  display: flex;
+  flex-wrap: wrap; /* Forces the tags to drop to the next line instead of spilling out */
+  gap: 10px; /* Consistent spacing between pills */
+  width: 100%; /* Ensures it respects the parent box's width */
+}
+
+/* The individual pills */
+.skill-tag {
+  display: inline-block; /* Helps the browser calculate wrapping correctly */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(165, 110, 255, 0.4); /* Matched the purple outline from your screenshot */
+  color: #cccccc;
+  padding: 6px 14px; /* Slightly reduced padding so more fit on a line */
+  border-radius: 30px; 
+  font-size: 0.85rem; /* Slightly smaller text for a cleaner look */
+  white-space: nowrap; /* Prevents words inside a single tag from splitting in half */
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background: rgba(165, 110, 255, 0.15);
+  border-color: #a56eff;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(165, 110, 255, 0.3);
+  transform: translateY(-2px);
+}
   /* Enter animations */
 .slide-in-left {
     opacity: 0;
